@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/bin/Debug
+/DockerTest.ApiGw/bin/Debug/netcoreapp2.2
+/DockerTest.ApiGw/obj
+/DockerTest.ApiGw/DockerTest.ApiGw.csproj.user
+/DockerTest.Blog/bin/Debug/netcoreapp2.2
+/DockerTest.Blog/obj
+/DockerTest.Client/bin/Debug/netcoreapp2.2
+/DockerTest.Client/obj
+/DockerTest.FileUpload/bin/Debug/netcoreapp2.2
+/DockerTest.FileUpload/obj
+/obj
+/src/ApiGateways/ApiGw-Base/obj/Docker

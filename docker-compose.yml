@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  apigw:
+    image: ${REGISTRY:-dockertest}apigw:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: ./DockerTest.ApiGw
+      dockerfile: Dockerfile
+    depends_on:
+      - blog
+      - fileupload
+      - web
+
+  blog:
+    image: ${REGISTRY:-dockertest}blog:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: ./DockerTest.Blog
+      dockerfile: Dockerfile
+
+  fileupload:
+    image: ${REGISTRY:-dockertest}fileupload:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: ./DockerTest.FileUpload
+      dockerfile: Dockerfile
+
+  web:
+    image: ${REGISTRY:-dockertest}web:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: ./DockerTest.Client
+      dockerfile: Dockerfile
+    depends_on:
+      - blog
+      - fileupload

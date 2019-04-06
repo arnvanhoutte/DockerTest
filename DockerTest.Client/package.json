@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "ng": "cd ClientApp && ng",
+    "start": "cd ClientApp && ng serve",
+    "build:dev": "cd ClientApp && ng build",
+    "build:dev:watch": "cd ClientApp && npm run build:dev && ng build --watch",
+    "build:prod": "cd ClientApp && ng build --prod --aot --extract-css",
+    "build:ssr": "cd ClientApp && npm run build -- --app=ssr --output-hashing=media",
+    "test": "cd ClientApp && ng test",
+    "lint": "cd ClientApp && ng lint",
+    "e2e": "cd ClientApp && ng e2e"
+  }
+}
